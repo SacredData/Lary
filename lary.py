@@ -1,10 +1,10 @@
 import yaml
 
 
-class Laryngitis:
+class Lary:
 
     """
-    Laryngitis is a small Python 3 tool that enables PGP encryption on PCM audio
+    Lary is a small Python 3 tool that enables PGP encryption on PCM audio
     streams. It works by allowing a user to parse WAV frame data as their message
     is being recorded, which enables us to pack and encrypt the resulting byte stream
     immediately after recording. The resulting output is a regular-looking
@@ -22,18 +22,19 @@ class Laryngitis:
         """
         Records a new message and receives its PGP string back.
         The string is saved to pgp_msg and it can be passed to other methods
-        within the Laryngitis class.
+        within the Lary class.
         """
         from send_laryngitis import record_message, encrypt_message
         try:
             rec_msg = record_message()
             print('Recording sampling frequency:  ', str(rec_msg[1]), 'Hz')
-            pgp_msg = encrypt_message(rec_msg[0])
         except:
             print("An error has occurred.")
             return
         else:
-            print("pgp_msg saved.")
+            try:
+                pgp_msg = encrypt_message(rec_msg[0])
+                print("pgp_msg saved.")
             return pgp_msg
 
     def play_msg(self, pgp_msg):
