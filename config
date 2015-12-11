@@ -1,0 +1,7 @@
+---
+PGP_KEY_PATH: /home/agrathwohl/.keys/akey.asc
+PGPRIV_PATH: /home/agrathwohl/.private/private.key
+COMMENTS: >
+    This is where comments go
+    to inform users about updates
+    and other such things.
