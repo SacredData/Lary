@@ -60,7 +60,7 @@ Your PGP string will then be accessible from `pgpmsg`.
 
 #### Play back a message
 
-You can play back any pgp_msg intended for your ears with `l.play(pgp_msg)`
+You can play back any pgp_msg intended for your ears with `l.play(pgpmsg)`
 
 ## Problems
 
@@ -73,6 +73,6 @@ There are many. The highest priority is to ensure that my encryption/decryption 
 
 I have many goals for the future of Lary.
 
-* Change the project name to Lary when the project is far enough along.
+* ~~Change the project name to Lary when the project is far enough along.~~
 * Enable OPUS audio as default audio file that gets encrypted and sent to the recipient. Less exploitable than WAV and also much better file sizes.
 * Create a CLI app that interfaces with this code to give users a real-world implementation of the concept.
