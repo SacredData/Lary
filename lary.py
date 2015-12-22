@@ -32,9 +32,8 @@ class Lary:
             print("An error has occurred.")
             return
         else:
-            try:
-                pgp_msg = encrypt_message(rec_msg[0])
-                print("pgp_msg saved.")
+            pgp_msg = encrypt_message(rec_msg[0])
+            print("pgp_msg saved.")
             return pgp_msg
 
     def play_msg(self, pgp_msg):
