@@ -28,13 +28,14 @@ class Lary:
         try:
             rec_msg = record_message()
             print('Recording sampling frequency:  ', str(rec_msg[1]), 'Hz')
+            self.freq = int(rec_msg[1])
         except:
             print("An error has occurred.")
             return
         else:
-            pgp_msg = encrypt_message(rec_msg[0])
+            self.pgp_msg = encrypt_message(rec_msg[0])
             print("pgp_msg saved.")
-            return pgp_msg
+            return self.pgp_msg
 
     def play_msg(self, pgp_msg):
         """
