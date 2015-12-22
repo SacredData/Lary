@@ -7,8 +7,8 @@ import wave
 
 THRESHOLD = 500
 CHUNK_SIZE = 1024
-FORMAT = pyaudio.paInt16
-RATE = 96000
+FORMAT = pyaudio.paInt32
+RATE = 44100
 
 
 def is_silent(snd_data):
@@ -114,7 +114,7 @@ def record_to_file(path):
     data = pack('<' + ('h' * len(data)), *data)
 
     wf = wave.open(path, 'wb')
-    wf.setnchannels(2)
+    wf.setnchannels(1)
     wf.setsampwidth(sample_width)
     wf.setframerate(RATE)
     wf.writeframes(data)
